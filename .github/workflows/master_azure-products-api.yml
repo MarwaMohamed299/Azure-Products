@@ -19,7 +19,7 @@ jobs:
           dotnet-version: '9.x'
 
       - name: Build with dotnet
-        run: dotnet build Products.Api/Products.Api.csproj --configuration Release   # ← specify project path
+        run: dotnet build Products.Api/Products.Api.csproj --configuration Release
 
       - name: dotnet publish
         run: dotnet publish Products.Api/Products.Api.csproj -c Release -o ${{env.DOTNET_ROOT}}/myapp
@@ -47,7 +47,7 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'azure-products-api'    # ← your Azure App Service name
+          app-name: 'azure-products-api'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE }}
           package: .
