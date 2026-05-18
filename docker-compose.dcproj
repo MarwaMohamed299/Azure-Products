@@ -7,7 +7,7 @@
     <ProjectGuid>65120bb4-2717-4886-8be1-296f114f72eb</ProjectGuid>
   </PropertyGroup>
   <ItemGroup>
-    <None Include=".github\workflows\master_azure-products-api.yml" />
+    <None Include=".github/workflows/master_azure-products-api.yml" />
     <None Include="docker-compose.override.yml">
       <DependentUpon>docker-compose.yml</DependentUpon>
     </None>
