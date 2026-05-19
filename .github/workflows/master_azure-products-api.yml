@@ -19,11 +19,11 @@ jobs:
           dotnet-version: '9.x'
 
       - name: Build with dotnet
-        run: dotnet build --configuration Release
+        run: dotnet build ./products-api/products-api.csproj --configuration Release
         working-directory: Products.Api
 
       - name: dotnet publish
-        run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
+        run: dotnet publish ./products-api/products-api.csproj -c Release -o ${{env.DOTNET_ROOT}}/myapp
         working-directory: Products.Api
 
       - name: Upload artifact for deployment job
