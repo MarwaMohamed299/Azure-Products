@@ -18,6 +18,12 @@ jobs:
         with:
           dotnet-version: '9.x'
 
+      - name: Debug
+        run: |
+          pwd
+          ls
+          ls Products.Api
+
       - name: Build with dotnet
         run: dotnet build ./Products.Api/Products.Api.csproj --configuration Release
 
